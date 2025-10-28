@@ -8,154 +8,211 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
+      background-color: #f5f8fa;
       color: #333;
-      background-color: #f9f9f9;
-    }
-
-    header {
-      background: linear-gradient(to right, #0077b6, #00b4d8);
-      color: white;
       text-align: center;
-      padding: 60px 20px;
     }
 
-    header h1 {
-      font-size: 2.5em;
-      margin: 0;
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
-    header p {
-      font-size: 1.1em;
-      margin-top: 10px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.55);
+      z-index: 1;
     }
 
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background-color: rgba(0,0,0,0.6);
+      padding: 40px 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .hero-content h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .hero-content p {
+      font-size: 1.2em;
+      margin: 0 auto;
+      max-width: 600px;
+      color: #dceefc;
+    }
+
+    /* SECTION STYLING */
     .container {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: 50px auto;
       padding: 0 20px;
     }
 
     section {
-      margin-bottom: 60px;
+      background: #fff;
+      margin: 30px 0;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
     }
 
     h2 {
       color: #0077b6;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 1.05em;
+      line-height: 1.6em;
       margin-bottom: 10px;
     }
 
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li::before {
+      content: "✔️ ";
+    }
+
     .highlight {
-      color: #00b4d8;
+      color: #0096c7;
       font-weight: 600;
     }
 
+    /* CTA BUTTON */
     .cta {
-      text-align: center;
-      margin-top: 40px;
+      margin-top: 35px;
     }
 
     .cta a {
-      background-color: #0077b6;
+      display: inline-block;
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
       color: white;
       text-decoration: none;
-      padding: 15px 40px;
-      border-radius: 30px;
-      font-size: 1.1em;
-      transition: 0.3s;
+      padding: 15px 45px;
+      border-radius: 40px;
+      font-size: 1.2em;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0, 183, 255, 0.3);
+      transition: 0.3s ease;
     }
 
     .cta a:hover {
-      background-color: #023e8a;
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #023e8a, #0096c7);
     }
 
     footer {
       background-color: #023e8a;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px 10px;
       font-size: 0.9em;
+      letter-spacing: 0.5px;
     }
 
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      background-color: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
+    @media (max-width: 768px) {
+      .hero-content h1 {
         font-size: 2em;
       }
-
-      .cta a {
-        padding: 12px 25px;
+      .hero-content p {
         font-size: 1em;
+      }
+      section {
+        padding: 30px 20px;
       }
     }
   </style>
 </head>
+
 <body>
+  <!-- HERO -->
   <header class="hero">
-    <h1>Partner with ITEX Reno</h1>
-    <p>Hotels, Airbnbs & Short-Term Rentals | Fill Rooms, Earn Trade Credits, Grow Your Business</p>
+    <div class="hero-content">
+      <h1>Partner with ITEX Reno</h1>
+      <p>Hotels, Airbnbs & Short-Term Rentals — Fill Rooms, Earn Trade Credits & Grow Your Business</p>
+    </div>
   </header>
 
+  <!-- CONTENT -->
   <div class="container">
     <section>
-      <h2>🏨 Why Partner with ITEX Reno?</h2>
+      <h2>🏨 Why Work with ITEX Reno?</h2>
       <p>
-        We work with hundreds of verified business owners traveling into <span class="highlight">Reno, Nevada</span> every month — for conferences, events, and meetings. 
-        They’re already booking stays — and now we want to send them to you through <strong>ITEX</strong>, our trusted business-to-business barter network.
+        Every month, hundreds of business owners travel into <span class="highlight">Reno, Nevada</span> for events, meetings, and conferences.  
+        They’re already booking rooms — now, let’s make sure they’re booking with <strong>you</strong>.
+      </p>
+      <p>
+        Through the <strong>ITEX Barter Network</strong>, we’ll help you fill empty nights and earn value — even when cash bookings slow down.
       </p>
     </section>
 
     <section>
       <h2>💡 How It Works</h2>
       <p>
-        Instead of paying cash, these guests use <span class="highlight">ITEX Dollars</span> (trade credits). 
-        You fill your rooms and earn credits that spend like cash — usable on business services, marketing, dining, cleaning, and even travel within the ITEX network.
+        Travelers use <span class="highlight">ITEX Dollars (Trade Credits)</span> to pay for their stays.  
+        You earn credits instead of cash — and spend them on:
       </p>
       <ul>
-        <li>✔️ Keep occupancy high, even off-season</li>
-        <li>✔️ Attract verified business travelers</li>
-        <li>✔️ Spend your earnings on valuable services locally</li>
+        <li>Cleaning, maintenance & supplies</li>
+        <li>Marketing, printing & advertising</li>
+        <li>Dining, entertainment, and travel</li>
+        <li>Other local services to grow your business</li>
       </ul>
     </section>
 
     <section>
-      <h2>💼 Who It's Perfect For</h2>
+      <h2>💼 Perfect For</h2>
       <ul>
         <li>🏠 Airbnb & Short-Term Rental Hosts</li>
-        <li>🏨 Boutique & Family Hotels</li>
-        <li>🏢 Extended Stay & Serviced Apartments</li>
+        <li>🏨 Boutique & Family-Run Hotels</li>
+        <li>🏢 Extended Stay & Corporate Lodging</li>
       </ul>
     </section>
 
     <section>
       <h2>🚀 Ready to Get Started?</h2>
       <p>
-        Fill your empty nights, meet verified business guests, and start trading with confidence. 
-        Joining ITEX is free to inquire — and we’ll walk you through how it fits your property.
+        Join the fastest-growing barter network in Reno — and turn your vacant nights into real business value.  
+        It’s free to inquire, and we’ll walk you through exactly how it fits your property.
       </p>
 
       <div class="cta">
-        <a href="https://itex.com" target="_blank">Join ITEX Reno</a>
+        <a href="https://itex.com" target="_blank">Join ITEX Reno Today</a>
       </div>
     </section>
   </div>
 
   <footer>
-    © 2025 ITEX Reno | Business-to-Business Barter Network
+    © 2025 ITEX Reno | Business-to-Business Barter Network | All Rights Reserved
   </footer>
 </body>
 </html>
