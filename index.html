@@ -66,15 +66,21 @@
       margin: 40px auto;
       max-width: 800px;
       padding: 20px;
-      background: #fff;
+      background: linear-gradient(135deg, #00b4d8, #90e0ef);
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .video-section:hover {
+      transform: translateY(-5px);
     }
 
     .video-section iframe {
       width: 100%;
       height: 450px;
       border-radius: 10px;
+      border: 0;
     }
 
     /* SECTION STYLING */
@@ -85,21 +91,22 @@
     }
 
     section {
-      background: #fff;
+      background: linear-gradient(135deg, #caf0f8, #ade8f4);
       margin: 30px 0;
       padding: 40px 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     section:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
     h2 {
       color: #0077b6;
-      font-size: 1.8em;
+      font-size: 1.9em;
       margin-bottom: 15px;
     }
 
@@ -119,13 +126,22 @@
     }
 
     .highlight {
-      color: #0096c7;
+      color: #0077b6;
       font-weight: 600;
     }
 
     /* CTA / CALENDLY */
     .cta {
       margin-top: 35px;
+      background: linear-gradient(135deg, #00b4d8, #0077b6);
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-5px);
     }
 
     .cta iframe {
@@ -134,7 +150,7 @@
       max-width: 600px;
       height: 650px;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -179,7 +195,6 @@
   <div class="video-section">
     <iframe src="https://www.youtube.com/embed/TD3GFefzi2k" 
             title="ITEX Reno Overview Video" 
-            frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
     </iframe>
@@ -229,7 +244,7 @@
       </p>
 
       <div class="cta">
-        <iframe src="https://calendly.com/kai-go-itex/itex-one-on-one" ></iframe>
+        <iframe src="https://calendly.com/kai-go-itex/itex-one-on-one"></iframe>
       </div>
     </section>
   </div>
