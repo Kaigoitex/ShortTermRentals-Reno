@@ -61,6 +61,22 @@
       color: #dceefc;
     }
 
+    /* VIDEO SECTION */
+    .video-section {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .video-section iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+    }
+
     /* SECTION STYLING */
     .container {
       max-width: 1100px;
@@ -107,27 +123,18 @@
       font-weight: 600;
     }
 
-    /* CTA BUTTON */
+    /* CTA / CALENDLY */
     .cta {
       margin-top: 35px;
     }
 
-    .cta a {
-      display: inline-block;
-      background: linear-gradient(135deg, #0077b6, #00b4d8);
-      color: white;
-      text-decoration: none;
-      padding: 15px 45px;
-      border-radius: 40px;
-      font-size: 1.2em;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(0, 183, 255, 0.3);
-      transition: 0.3s ease;
-    }
-
-    .cta a:hover {
-      transform: scale(1.05);
-      background: linear-gradient(135deg, #023e8a, #0096c7);
+    .cta iframe {
+      border: none;
+      width: 100%;
+      max-width: 600px;
+      height: 650px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 
     footer {
@@ -149,6 +156,12 @@
       section {
         padding: 30px 20px;
       }
+      .video-section iframe {
+        height: 300px;
+      }
+      .cta iframe {
+        height: 500px;
+      }
     }
   </style>
 </head>
@@ -161,6 +174,16 @@
       <p>Hotels, Airbnbs & Short-Term Rentals — Fill Rooms, Earn Trade Credits & Grow Your Business</p>
     </div>
   </header>
+
+  <!-- VIDEO -->
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/TD3GFefzi2k" 
+            title="ITEX Reno Overview Video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
 
   <!-- CONTENT -->
   <div class="container">
@@ -199,14 +222,14 @@
     </section>
 
     <section>
-      <h2>🚀 Ready to Get Started?</h2>
+      <h2>🚀 Book a Free Demo</h2>
       <p>
-        Join the fastest-growing barter network in Reno — and turn your vacant nights into real business value.  
-        It’s free to inquire, and we’ll walk you through exactly how it fits your property.
+        Select a time below to schedule your free ITEX demo.  
+        We'll walk you through exactly how your property can benefit from Reno’s fastest-growing barter network.
       </p>
 
       <div class="cta">
-        <a href="https://itex.com" target="_blank">Join ITEX Reno Today</a>
+        <iframe src="https://calendly.com/kai-go-itex/itex-one-on-one" ></iframe>
       </div>
     </section>
   </div>
